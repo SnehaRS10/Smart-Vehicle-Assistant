@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection Video Stream</title>
+    <style>
+        /* Style for displaying videos in a row */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Add space between videos */
+        }
+
+        .video-box {
+            border: 2px solid #000;
+            padding: 10px;
+        }
+
+        video {
+            width: 500px; /* Set the width of each video */
+            height: auto; /* Maintain the aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <h1>Object Detection Video Streams</h1>
+    <div class="video-container">
+        <!-- Front Video Feed -->
+        <div class="video-box">
+            <h3>Front Video</h3>
+            <img src="{{ url_for('front_video_feed') }}" alt="Front Video Feed" />
+        </div>
+
+        <!-- Back Video Feed -->
+        <div class="video-box">
+            <h3>Back Video</h3>
+            <img src="{{ url_for('back_video_feed') }}" alt="Back Video Feed" />
+        </div>
+    </div>
+</body>
+</html>
